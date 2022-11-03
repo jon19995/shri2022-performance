@@ -455,18 +455,6 @@ html, body {
     background-size: contain;
 }
 
-.event__icon_light {
-    background-image: url(assets/icon_sun-min.svg);
-}
-
-.event__icon_light2 {
-    background-image: url(assets/icon_sun_2-min.svg);
-}
-
-.event__icon_schedule {
-    background-image: url(assets/icon_scheduled-min.svg);
-}
-
 .event__title {
     margin: 0;
     font-size: 0.875rem;
