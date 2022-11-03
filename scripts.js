@@ -79,25 +79,21 @@
         });
     }
 
-    function makeMenu(node, menuText, links) {
+    function makeMenu(node) {
         let expanded = false;
+        const links = document.querySelector('.header__links');
 
         node.addEventListener('click', () => {
             expanded = !expanded;
             node.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-            menuText.textContent = expanded ? 'Закрыть меню' : 'Открыть меню';
+            node.querySelector('.header__menu-text').textContent = expanded ? 'Закрыть меню' : 'Открыть меню';
             links.classList.toggle('header__links_opened', expanded);
             links.classList.add('header__links-toggled');
         });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        const devices = document.querySelector('.main__devices');
-        makeTabs(devices)
-        const burger = document.querySelector('.header__menu');
-        const menuText = burger.querySelector('.header__menu-text');
-        const links = document.querySelector('.header__links');
-        
-        makeMenu(burger, menuText, links);
+        Array.from(document.querySelectorAll('.main__devices')).forEach(makeTabs);
+        Array.from(document.querySelectorAll('.header__menu')).forEach(makeMenu);
     });
 })();
