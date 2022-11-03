@@ -92,7 +92,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        const devices = document.querySelectorAll('.main__devices');
+        const devices = document.querySelector('.main__devices');
         makeTabs(devices)
         const burger = document.querySelector('.header__menu');
         const menuText = burger.querySelector('.header__menu-text');
